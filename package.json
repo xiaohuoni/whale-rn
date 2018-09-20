@@ -13,8 +13,7 @@
     "format": "concurrently \"npm run prettier\" \"npm run lint --fix\"",
     "precommit": "npm run format",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "copyFile": "node scripts/copyComponents",
-    "start": "concurrently \"npm run copyFile\" \"npm run startRn\"",
+    "start": "umi dev",
     "startRn": "node node_modules/react-native/local-cli/cli.js start --projectRoots rn",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios --project-path rn/ios"
   },
@@ -69,6 +68,9 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.5.0",
-    "react-native": "^0.57.0"
+    "react-art": "^16.5.2",
+    "react-native": "^0.57.0",
+    "react-native-web": "^0.9.0",
+    "umi": "^2.0.3"
   }
 }
